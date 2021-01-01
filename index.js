@@ -115,23 +115,23 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: '⌛ Aguarde um pouco... ⌛',
-				success: '✔️ Berhasil ✔️',
+				wait: '⌛ Espere un poco.... ⌛',
+				success: '✔️ Completado ✔️',
 				error: {
-					stick: '❌ Falha, ocorreu um erro ao converter a imagem em um adesivo ❌',
+					stick: '❌ ERROR al convertir imagen en STICKER ❌',
 					Iv: '❌ Link inválido ❌'
 				},
 				only: {
-					group: '❌ Este comando só pode ser usado em grupos! ❌',
-					ownerG: '❌ Este comando só pode ser usado pelo grupo proprietário! ❌',
-					ownerB: '❌ Este comando só pode ser usado pelo bot proprietário! ❌',
-					admin: '❌ Este comando só pode ser usado por administradores de grupo! ❌',
-					Badmin: '❌ Este comando só pode ser usado quando o bot se torna administrador! ❌'
+					group: '❌ Este comando solo puede ser ejecutado en grupos! ❌',
+					ownerG: '❌ Este comando solo puede ser ejecutado por grupo proprietário! ❌',
+					ownerB: '❌ Este comando solo puede ser ejecutado por bot proprietário! ❌',
+					admin: '❌ Este comando solo puede ser ejecutado por administradores de grupo! ❌',
+					Badmin: '❌ Este comando solo puede ser ejecutado por administradores! ❌'
 				}
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["6285892766102@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["51940967594@s.whatsapp.net"] // replace this with your number
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
